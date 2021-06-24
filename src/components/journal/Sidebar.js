@@ -1,5 +1,4 @@
 import React from 'react'
-import { JournalEntries } from './JournalEntries'
 import {useDispatch} from "react-redux";
 import {startLogout} from "../../actions/auth";
 

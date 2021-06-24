@@ -6,7 +6,8 @@ import {
   } from 'react-router-dom';
 
 import { AuthRouter } from './AuthRouter';
-import { JournalScreen } from '../components/journal/JournalScreen';
+//import { JournalScreen } from '../components/journal/JournalScreen';
+import App from '../components/journal/Home'
 import firebase from "firebase";
 import {useDispatch} from "react-redux";
 import {login} from "../actions/auth";
@@ -53,7 +54,7 @@ export const AppRouter = () => {
                         exact
                         isAuthenticated={isLoggedIn}
                         path="/"
-                        component={ JournalScreen }
+                        component={ App }
                     />
 
                     <Redirect to="/auth/login" />

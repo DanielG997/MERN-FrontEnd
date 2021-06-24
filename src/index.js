@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { JournalApp } from './JournalApp';
+import { LoginApp } from './LoginApp';
 import './styles/styles.scss'
 
 
 
 ReactDOM.render(
-  <JournalApp />,
+        <LoginApp />,
   document.getElementById('root')
 );
 

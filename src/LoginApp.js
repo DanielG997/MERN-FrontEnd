@@ -3,7 +3,7 @@ import { AppRouter } from './routers/AppRouter';
 import {Provider} from 'react-redux'
 import {store} from "./store/store";
 
-export const JournalApp = () => {
+export const LoginApp = () => {
     return (
         <Provider store={store}>
                 <AppRouter />

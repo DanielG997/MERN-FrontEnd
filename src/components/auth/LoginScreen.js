@@ -25,7 +25,6 @@ export const LoginScreen = () => {
         dispatch(startGoogleLogin());
     }
 
-
     return (
         <>
             <h3 className="auth__title">Inicio de Sesión</h3>
