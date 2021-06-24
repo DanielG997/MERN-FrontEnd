@@ -6,8 +6,7 @@ import {
   } from 'react-router-dom';
 
 import { AuthRouter } from './AuthRouter';
-//import { JournalScreen } from '../components/journal/JournalScreen';
-import App from '../components/journal/Home'
+import App from '../components/home/Home'
 import firebase from "firebase";
 import {useDispatch} from "react-redux";
 import {login} from "../actions/auth";

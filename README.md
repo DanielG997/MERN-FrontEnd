@@ -1,14 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FRONTEND de proyecto de Comida
 
-## Script de inicialización
-
-En el directorio principal, ejecutar:
-
-### `npm start`
+_Acá esta el frontEnd del proyecto de CRUD de comidas usando el stack MERN_
 
 
-Abre [http://localhost:3000](http://localhost:3000) para ver en el navegador.
+### Pre-requisitos 📋
 
-Registrar usuarios medante google o mediante correo electronico
+_Deben tener instalado Node como requisito principal_
 
-Probar login usando `Google` o con `Usuario y contraseña`
+
+### Instalación 🔧
+
+_En la raiz del proyecto, debe ejecutar el siguiente comando_
+
+```
+npm start
+```
+
+## Construido con 🛠️
+
+_Herramientas utilizadas para el desarrollo_
+
+* [IntelliJ](https://www.jetbrains.com/es-es/idea/) - Entorno de desarrollo
+* [Node](https://nodejs.org/es/) - Entorno de ejecución
+* [npm](https://www.npmjs.com/) - Manejador de dependencias
+
+## Autores ✒️
+
+* **Daniel Guerra** - *Trabajo Completo* - [DanielG997](https://github.com/DanielG997)
+
