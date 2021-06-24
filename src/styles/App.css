@@ -1,0 +1,113 @@
+.App {
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+body {
+  background-color: #e9e9f5;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+input, button {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.food {
+  padding: 0px;
+  width: 450px;
+  height: 200px;
+  margin: 1px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#listadoComida {
+  display: flex;
+  flex-wrap: wrap; 
+  width: 1280px;
+}
+
+#cardComida {
+  width: 360px;
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+  
+}
+
+#titulosComida {
+  text-align: left;
+  margin-bottom: 10px
+}
+
+#textosComida {
+  display:flex;
+  width: 55%;
+}
+
+#actualizarComida {
+  background-color: #e9e9f5; 
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+#showedFoods {
+  text-align: left;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+#eliminarComida {
+  background-color: #e9e9f5;
+  width: 40px;
+  height: 40px;
+}
+
+#btnLogout {
+  position: absolute; /*or fixed*/
+  left: 0px;
+  display: block;
+  top: 0px;
+  background-color: #e9e9f5;
+  width: 40px;
+  height: 40px;
+}
+
+#relojito
+{
+    position: absolute; /*or fixed*/
+    right: 0px;
+    display: block;
+    top: 0px;
+    color: black;
+}
+
+h1 {
+  color: black;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+h2 {
+  color: black;
+  font-size: x-large;
+  font-style: normal;
+}
+
+h3 {
+  color: black;
+  font-weight: unset;
+  margin: inherit;
+}
