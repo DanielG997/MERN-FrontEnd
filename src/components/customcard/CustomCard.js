@@ -1,9 +1,8 @@
 import React, {useState} from "react";
-import {Button, Card, IconButton, Modal} from "@material-ui/core";
+import {Button, Card} from "@material-ui/core";
 import TextField from '@material-ui/core/TextField';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
-import Tooltip from '@material-ui/core/Tooltip';
 import '../home/Home';
 import '../../styles/App.css';
 import Dialog from '@material-ui/core/Dialog';
@@ -101,12 +100,12 @@ const CustomCard = ({
                                 aria-labelledby="alert-dialog-title"
                                 aria-describedby="alert-dialog-description">
                             <DialogTitle>
-                                {"¿Está seguro?"}
+                                {"¿Está seguro que desea eliminar la comida?"}
                             </DialogTitle>
                             <DialogContent>
                                 <DialogActions>
                                     <Button onClick={handleCloseDialog}>
-                                        Cerrar
+                                        Cancelar
                                     </Button>
                                     <Button
                                         id="eliminarComida"
@@ -115,7 +114,7 @@ const CustomCard = ({
                                             (eliminarComida(val._id));
                                             handleCloseDialog();
                                         }}>
-                                        Si
+                                        Aceptar
                                     </Button>
                                 </DialogActions>
                             </DialogContent>

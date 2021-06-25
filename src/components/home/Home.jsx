@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Axios from 'axios';
 import {useDispatch} from "react-redux";
-import {makeStyles, withStyles} from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import IconButton from '@material-ui/core/IconButton';
 import CustomCard from '../customcard/CustomCard';
@@ -10,7 +10,7 @@ import image from '../../logos/Logo_rojito.png';
 import {ButtonAddComida} from "../button/button";
 import Toast from '../toast/Toast';
 import AppBar from '@material-ui/core/AppBar';
-import {TextField, Modal, Tooltip} from "@material-ui/core";
+import {TextField, Tooltip} from "@material-ui/core";
 import {startLogout} from "../../actions/auth";
 
 
@@ -21,6 +21,7 @@ function App() {
         dispatch(startLogout())
     }
 
+    // eslint-disable-next-line
     const useStyles = makeStyles((theme) => ({
         button: {
             margin: theme.spacing(1),
