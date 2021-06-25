@@ -4,10 +4,12 @@ import Axios from 'axios';
 import '../../styles/App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import CustomCard from '../customcard/CustomCard';
+import image from '../../logos/Logo_blanco.png';
 import { ButtonAddComida } from "../button/button";
 import IconButton from '@material-ui/core/IconButton';
 import Toast from '../toast/Toast';
-import { TextField } from "@material-ui/core";
+import AppBar from '@material-ui/core/AppBar';
+import {TextField, Tooltip} from "@material-ui/core";
 import {startLogout} from "../../actions/auth";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
@@ -35,6 +37,7 @@ function App() {
     const [nombreComida, setNombreComida] = useState("");
     const [cantidadComida, setCantidad] = useState(0);
     const [nuevaComida, setNuevaComida] = useState("");
+    const [nuevaCantComida, setNuevaCantComida] = useState("");
     const [listaDeComida, setListaDeComida] = useState([]);
     const [openToast, setOpenToast] = useState(false);
     const [severity, setSeverity] = useState("");
@@ -51,8 +54,6 @@ function App() {
       seCTime(time);
     }
     setInterval(updateTime, 1000);
-
-
 
     const getData = async () => {
       const response = await Axios.get("http://localhost:3001/read");
@@ -102,6 +103,18 @@ function App() {
       }
     };
 
+    const actualizarCantComida = async (id) => {
+      const response = await Axios.put("http://localhost:3001/update-quantity", {
+        id: id,
+        nuevaCantComida: nuevaCantComida,
+      });
+      if (response.status === 200) {
+        await getData();
+        setNombreComida("");
+        setCantidad("");
+      }
+    };
+
     const eliminarComida = async (id) => {
       // eslint-disable-next-line
       const response = await Axios.delete(`http://localhost:3001/delete/${id}`
@@ -126,19 +139,33 @@ function App() {
 
         <div className="App">
 
-          <div>
-            <IconButton
-                id="btnLogout"
-                color="secondary"
-                onClick={handleLogout}>
-              <ExitToAppIcon />
-            </IconButton>
-          </div>
+          <AppBar position="static"
+          color="transparent">
+            <div style={classes.logoHorizontalCentrado}>
+              <img src={image} className={classes.logo} alt="logo"
+              width={80}
+              height={30}/>
+            </div>
+            <div>
+              <Tooltip title="Cerrar Sesión">
+              <IconButton
+                  id="btnLogout"
+                  color="secondary"
+                  onClick={handleLogout}>
+                <ExitToAppIcon />
+              </IconButton>
+              </Tooltip>
+            </div>
 
-          <div id="relojito">
-            <p>Hora Actual</p>
-            <p>{time}</p>
-          </div>
+            <div id="relojito">
+              <p>Hora Actual</p>
+              <p>{time}</p>
+            </div>
+
+            <div id="logoACL">
+            </div>
+          </AppBar>
+
             <h1>CRUD de Comida</h1>
             <br/>
 
@@ -151,11 +178,13 @@ function App() {
                 value={nombreComida} 
                 id="txtNameComida"
                 size="small"
+                color="primary"
                 label="Nombre de la comida" 
                 placeholder="Inserte comida"
                 variant="outlined"
                 InputLabelProps={{
                   shrink: true,
+                  style: {color: 'white'},
                 }}
                 onChange={(event) => {
                 setNombreComida(event.target.value);
@@ -187,6 +216,7 @@ function App() {
             <h2> Lista de Alimentos </h2>
             <CustomCard   listaDeComida = {listaDeComida}
                           setNuevaComida = {setNuevaComida}
+                          setNuevaCantComida={setNuevaCantComida}
                           actualizarComida = {actualizarComida}
                           eliminarComida = {eliminarComida}/>
             </div>
