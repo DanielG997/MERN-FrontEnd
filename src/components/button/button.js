@@ -5,9 +5,10 @@ import theme from '../../styles/theme/theme';
 
 export const ButtonAddComida = styled(Button)((props) => (`
 &.MuiButtonBase-root {
-        background-color: ${props.bg || theme.palette.blue1 };
+        background-color: ${props.bg || theme.palette.blue1};
         color: ${props.color || theme.palette.common.white};
         margin-top: ${props.mtop || "0"};
+        padding-top: ${props.ptop || "5"};
         display: ${props.display || 'block'};
         text-transform: capitalize;
 &:hover {

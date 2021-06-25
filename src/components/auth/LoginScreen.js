@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import {useForm} from "../../hooks/useForm";
 import {useDispatch, useSelector} from "react-redux";
 import {startGoogleLogin, startLoginEmailPassword} from "../../actions/auth";
+import {AppBar} from "@material-ui/core";
+import image from '../../logos/Logo_blanco.png'
 
 export const LoginScreen = () => {
 
@@ -26,6 +28,7 @@ export const LoginScreen = () => {
     }
 
     return (
+
         <>
             <h3 className="auth__title">Inicio de Sesión</h3>
 

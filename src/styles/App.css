@@ -1,134 +1,151 @@
 .App {
-  text-align: center;
-  display:flex;
-  flex-direction: column;
-  background-image: url("https://i.ibb.co/DVbmJG0/Whats-App-Image-2021-06-24-at-19-16-49.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://i.ibb.co/DVbmJG0/Whats-App-Image-2021-06-24-at-19-16-49.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
 }
 
 body {
-  background-color: #e9e9f5;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+    background-color: #e9e9f5;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 input, button {
-  width: 200px;
-  height: 30px;
-  font-size: 20px;
-  margin: 5px;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    margin: 5px;
 }
 
 .food {
-  padding: 0px;
-  width: 450px;
-  height: 200px;
-  margin: 1px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+    padding: 0px;
+    width: 450px;
+    height: 200px;
+    margin: 1px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 
 #listadoComida {
-  display: flex;
-  flex-wrap: wrap; 
-  width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1280px;
 }
 
 #cardComida {
-  width: 360px;
-  padding: 20px;
-  margin: 10px;
-  text-align: left;
-  margin-bottom: 10px;
-  
+    width: 360px;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+
 }
 
 #titulosComida {
-  text-align: left;
-  margin-bottom: 10px
+    text-align: left;
+    margin-bottom: 10px
 }
 
 #textosComida {
-  display:flex;
-  width: 55%;
+    display: flex;
+    width: 55%;
 }
 
-#actualizarComida {
-  background-color: #e9e9f5;
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
+#btn-update-comida {
+    font-size: small;
+    background-color: #1976d2;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
-#actualizarCantComida {
-  background-color: #0404f8;
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
+#btn-update-cant-comida {
+    font-size: small;
+    background-color: #1976d2;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+#btn-delete-comida {
+    font-size: small;
+    background-color: #DC004e;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+#titleDialog {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #showedFoods {
-  text-align: left;
-  margin-bottom: 10px;
-  text-transform: capitalize;
+    text-align: left;
+    margin-bottom: 10px;
+    text-transform: capitalize;
 }
 
-#eliminarComida {
-  background-color: #e9e9f5;
-  width: 40px;
-  height: 40px;
+#AppBar {
+    height: 55px;
 }
 
 #btnLogout {
-  position: absolute; /*or fixed*/
-  left: 5px;
-  margin-top: 5px;
-  top: 0px;
-  bottom: 3px;
-  background-color: #e9e9f5;
-  width: 40px;
-  height: 40px;
+    position: absolute; /*or fixed*/
+    left: 5px;
+    margin-top: 5px;
+    top: 0px;
+    bottom: 3px;
+    background-color: #e9e9f5;
+    width: 40px;
+    height: 40px;
 }
 
 #relojito {
-  margin-top: 5px;
-  margin-right: 10px;
-  position: absolute; /*or fixed*/
-  right: 0px;
-  display: block;
-  top: 0px;
-  color: white;
-}
-
-#logoACL {
-  text-align: left;
-  height: 50px;
-  width: 10px;
+    margin-top: 11px;
+    margin-right: 10px;
+    position: absolute; /*or fixed*/
+    right: 0px;
+    display: block;
+    top: 0px;
+    color: white;
 }
 
 h1 {
-  color: black;
-  margin-top: 0px;
-  padding-top: 0px;
-  padding-bottom: 10px;
-  color: white;
+    color: black;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    color: white;
+}
+
+#listadito {
+    color: white;
+    font-size: x-large;
+    font-style: normal;
 }
 
 h2 {
-  color: white;
-  font-size: x-large;
-  font-style: normal;
+    color: black;
+    font-size: x-large;
+    font-style: normal;
 }
 
 h3 {
-  color: black;
-  font-weight: unset;
-  margin: inherit;
+    color: black;
+    font-weight: unset;
+    margin: inherit;
 }
